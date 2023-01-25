@@ -1,0 +1,10 @@
+body{
+    background-color: red;
+    text-align: center;
+}
+
+#botoncito{
+    width: 200px;
+    height: 100px;
+    font-size: 25px;
+}
