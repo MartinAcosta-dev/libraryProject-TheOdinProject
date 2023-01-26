@@ -8,12 +8,12 @@ function constructorBook(titulo, autor, paginas, leido){
 constructorBook.prototype.getInfo = function(){
     let respuesta = "";
 
-    respuesta += "El titulo del libro es: "+this.titulo+". \nSu autor es: "+this.autor+".\nSu numero de paginas es: "+this.paginas;
+    respuesta += "El titulo del libro es: "+this.titulo+". <br> Su autor es: "+this.autor+". <br> Su numero de paginas es: "+this.paginas;
 
     if(this.leido == false){
-        respuesta += "\nAun no ha leido este libro.";
+        respuesta += "<br> Aun no ha leido este libro.";
     }else{
-        respuesta += "\nYa ha leido este libro!!";
+        respuesta += "<br> Ya ha leido este libro!!";
     }
     return respuesta;
 }
