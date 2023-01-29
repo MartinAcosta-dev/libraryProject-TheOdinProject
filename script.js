@@ -9,13 +9,7 @@ $(document).ready(function(){
 
     });
 
-    $(".btnRemoveBook").click(function(){
-        let padre = $(this).parent();
-        padre.hide("fast");
-        
-    })
-
-    $(".contenedorLibros").eq(1).on('click', ".btnRemoveBook" , function(){
+    $(".contenedorLibros").on('click', ".btnRemoveBook" , function(){
         var padre = $(this).parent();
         padre.hide("fast");
     });
@@ -29,8 +23,12 @@ $(document).ready(function(){
 
         let newBook = new Book(titulo, autor, numPaginas, leido);
 
-        booksArray.push(newBook);
+        addBookToArray(newBook);
 
-        console.log(booksArray);
+        limpiarFormulario();
+
+        listBooks(booksArray);
+
+       
     });
 });
