@@ -16,35 +16,76 @@
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
     crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" 
+    integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+     integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <header>
-        <h1>Library Project</h1>
+        <h1>Proyecto Biblioteca (The Odin Project)</h1>
     </header>
 
     <div class="contenedor">
-        <div id="btnAddBook"> + Agregar libro</div>
-        <br>
+        <div id="contenedorBoton">
+            <div id="btnAddBook"> + Añadir libro</div>
+        </div>
+        
         <br>
         <hr>
         <br>
-        <div class="libros">
-            <div id="caja1" class="claseNueva cajita hola">Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Assumenda, omnis dolor incidunt ullam tenetur dicta ea poss
-                imus, nisi asperiores veniam repellat. Nam illum commodi nemo quas autem, cum
-                que quidem distinctio?
+        
+        <h2>Mis libros:</h2>
+        <br>
+        <div class="contenedorLibros">
+            <div id="caja1" class="claseNueva cajita hola">
+                <div>Titulo:</div>
+                <hr>
+                <div>Autor:</div>
+                <hr>
+                <div>Num. páginas:</div>
+                <hr>
+                <button class="btnRead">Leído ✓</button>
+                <hr>
+                <button class="btnRemoveBook">Eliminar</button>
             </div>
-            <div id="caja2" class="cajita" title="Google">hola</div>
-            <div id="caja3" class="claseNueva cajita"><a href="https://www.google.com" title="Google">Ir a Google</a></div>
+            
         </div>
+
+        <br>
+
+        <h2>Libros por API: <br> <span>(Consulta a https://jsonplaceholder.typicode.com/users)</span></h2>
+        <br>
+        <div class="contenedorLibros">
+            
+        </div>
+        
+
     </div>
 
+    
     <footer>
-        Footer
+        
     </footer>
 
+    <!--Modal-->
+    <div id="dialog" title="Añadir libro" style="display: none;">
+        <form id="formAddBook" action=""> 
+            <input id="titulo" placeholder="Titulo" type="text"> <br>
+            <input id="autor" placeholder="Autor" type="text"> <br>
+            <input id="numPaginas" placeholder="Num. de páginas" type="number"> <br>
+            <div id="divCheckRead"> Leído <input type="checkbox" id="checkRead"> </div> <br>
+            <div id="addBook">Añadir</div>
+        </form>
+    </div>
    
         
     <script src="script.js"></script>
+    <script src="listarLibrosDesdeApi.js"></script>
+    <script src="functions.js"></script>
 </body>
 </html>

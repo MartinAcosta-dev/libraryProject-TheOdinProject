@@ -9,7 +9,7 @@ body{
 }
 
 header{
-    background-color: rgb(246, 249, 182);
+    background-color: rgb(232, 232, 232);
     padding: 20px;
     box-shadow: 2px 1px 5px gray ;
 }
@@ -19,47 +19,113 @@ header{
     padding: 20px;
 }
 
+#contenedorBoton{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #btnAddBook{
     border: 1px solid black;
-    padding: 5px;
+    height: 50px;
+    width: 200px;
+
+    padding: 6px;
+
+    font-size: 23px;
+    
+  
     border-radius: 20px;
-    display: inline;
-    box-shadow: 1px 1px 2px black;
-    margin-bottom: 10px;
-    background-color: rgb(246, 249, 182);
+  
+    box-shadow: 1px 2px 5px 1px rgb(141, 141, 141);
+
+
+    background-color: rgb(232, 232, 232);
+
+    user-select: none;
 }
 
 #btnAddBook:hover{
     cursor: pointer;
-    background-color: rgb(250, 252, 221);
+    background-color: rgb(255, 255, 255);
 }
 
-.libros{
-    background-color: rgb(246, 249, 182);
+.contenedorLibros{
+    background-color: rgb(232, 232, 232);
+    border-radius: 7px;
     min-height: 400px;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around; 
     flex-wrap: wrap;
+    box-shadow: 1px 1px 7px 1px rgb(90, 89, 89);
 }
 
-#caja1{
-    background-color: red;
+
+.cajita{
+    box-shadow: 1px 1px 7px 4px rgb(90, 89, 89);
+    border-radius: 24px;
     width: 400px;
     height: 300px;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    font-size: 23px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    overflow: hidden;
 }
 
-#caja2{
-    background-color: blue;
-    width: 400px;
-    height: 300px;
+.btnRead{
+    border: 1px solid rgb(187, 252, 187);;
+    
+    width: 100px;
+    font-size: 18px;
+    background-color: rgb(187, 252, 187);
 }
 
-#caja3{
-    background-color: green;
-    width: 400px;
-    height: 300px;
+.btnRead:hover{
+    cursor: pointer;
+    background-color: rgb(222, 255, 222) ;
+}
+
+.btnNotRead{
+    background-color: rgb(252, 170, 170);
+}
+
+.btnNotRead:hover{
+    cursor: pointer;
+    background-color: rgb(255, 213, 213);
+}
+
+.btnRemoveBook{
+    border: 1px solid black;
+    height: 35px;
+    width: 130px;
+
+    padding: 4px;
+
+    font-size: 20px;
+    
+  
+    border-radius: 20px;
+  
+    box-shadow: 1px 2px 5px 1px rgb(141, 141, 141);
+
+    margin-top: 15px;
+    background-color: rgb(255, 150, 150);
+}
+
+.btnRemoveBook:hover{
+    background-color: rgb(252, 203, 203);
+    cursor: pointer;
+}
+
+span{
+    font-size: 12px;
 }
 
 footer{
@@ -68,4 +134,45 @@ footer{
 
 .letraRoja{
     color: red;
+}
+
+#dialog{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formAddBook input{
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#formAddBook #divCheckRead{
+    font-size: 20px;
+}
+
+#addBook{
+    border: 1px solid rgb(232, 232, 232);
+    height: 40px;
+    width: 100%;
+
+    padding: 6px;
+
+    font-size: 23px;
+    
+  
+    
+  
+    box-shadow: 1px 2px 5px 1px rgb(141, 141, 141);
+
+
+    background-color: rgb(232, 232, 232);
+    user-select: none;
+}
+
+#addBook:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
 }
