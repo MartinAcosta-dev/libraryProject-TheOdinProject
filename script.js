@@ -36,9 +36,11 @@ $(document).ready(function(){
         if ( $(this).hasClass("btnRead") ){
             $(this).removeClass("btnRead");
             $(this).addClass("btnNotRead");
+            $(this).text("No leido ✗")
         }else{
             $(this).removeClass("btnNotRead");
             $(this).addClass("btnRead");
+            $(this).text("Leído ✓")
         }
     });
 
