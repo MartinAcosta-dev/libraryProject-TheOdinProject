@@ -1,0 +1,2 @@
+Falta eliminar del vector cuando se marca libro leido o no leido
+Y despues trabajar con el localstorage
