@@ -14,7 +14,7 @@ function addBookToArray(book){
 function removeBookFromArray(titulo){
     booksArray.forEach(function(element, index){
         if (element.titulo == titulo){
-            booksArray.splice(index);            
+            booksArray.splice(index,1);            
         }
     });
 }
