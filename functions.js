@@ -11,6 +11,14 @@ function addBookToArray(book){
     booksArray.push(book);
 }
 
+function removeBookFromArray(titulo){
+    booksArray.forEach(function(element, index){
+        if (element.titulo == titulo){
+            booksArray.splice(index);            
+        }
+    });
+}
+
 function limpiarFormulario(){
     $("#dialog input").val("");
     $("#dialog #checkRead").prop("checked", false);
@@ -26,11 +34,9 @@ function listBooks(booksArray){
 
     booksArray.forEach(element => {
 
-        console.log(element);
-
         let card = `
         <div class="cajita">
-            <div>Titulo: ${element.titulo}</div>
+            <div class="inline" >Titulo: <div class="inline" id="title">${element.titulo}</div></div>
             <hr>
             <div>Autor: ${element.autor}</div>
             <hr>
@@ -53,7 +59,7 @@ function listBooks(booksArray){
                 `
             }
             
-        console.log(card);    
+      
         $(".contenedorLibros").eq(0).append(card);    
         
     });

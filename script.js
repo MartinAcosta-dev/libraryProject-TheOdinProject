@@ -5,12 +5,14 @@ $(document).ready(function(){
             modal: true,
             draggable: false,
             width: 500
-        });
-
+        });   
     });
 
     $(".contenedorLibros").on('click', ".btnRemoveBook" , function(){
         var padre = $(this).parent();
+        var titulo = padre.find("#title").text();
+        removeBookFromArray(titulo);
+
         padre.hide("fast");
     });
 
@@ -27,8 +29,7 @@ $(document).ready(function(){
 
         limpiarFormulario();
 
-        listBooks(booksArray);
-
-       
+        listBooks(booksArray);   
     });
+
 });
