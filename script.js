@@ -32,4 +32,14 @@ $(document).ready(function(){
         listBooks(booksArray);   
     });
 
+    $(".contenedorLibros").on("click",".btnReadNotRead",function(){
+        if ( $(this).hasClass("btnRead") ){
+            $(this).removeClass("btnRead");
+            $(this).addClass("btnNotRead");
+        }else{
+            $(this).removeClass("btnNotRead");
+            $(this).addClass("btnRead");
+        }
+    });
+
 });

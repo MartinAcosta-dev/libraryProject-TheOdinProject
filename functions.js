@@ -45,19 +45,20 @@ function listBooks(booksArray){
 
             if(element.leido == true){
                 card += `
-                    <button class="btnRead">Leído ✓</button>
-                    <hr>
-                    <button class="btnRemoveBook">Eliminar</button>
-                </div>
+                    <button class="btnReadNotRead btnRead">Leído ✓</button>
+                    
                 `
             }else{
                 card += `
-                    <button class="btnNotRead">No leído ✗</button>
-                    <hr>
-                    <button class="btnRemoveBook">Eliminar</button>
-                </div>
+                    <button class="btnReadNotRead btnNotRead">No leído ✗</button>
+                  
                 `
             }
+
+            card+= `
+                    <hr>
+                    <button class="btnRemoveBook">Eliminar</button>
+                </div>`
             
       
         $(".contenedorLibros").eq(0).append(card);    

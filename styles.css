@@ -93,12 +93,16 @@ header{
 }
 
 .btnNotRead{
-    background-color: rgb(252, 170, 170);
+    border: 1px solid rgb(253, 173, 150);
+    
+    width: 100px;
+    font-size: 18px;
+    background-color: rgb(253, 173, 150);
 }
 
 .btnNotRead:hover{
     cursor: pointer;
-    background-color: rgb(255, 213, 213);
+    background-color: rgb(255, 208, 195);
 }
 
 .btnRemoveBook{
